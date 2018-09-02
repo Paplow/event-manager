@@ -20,20 +20,20 @@ class EventServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__.'/EventManager/routes.php');
-        $this->loadViewsFrom(__DIR__.'/EventManager/Views', 'eventManager');
-        $this->loadMigrationsFrom(__DIR__.'/EventManager/Migrations');
+        $this->loadRoutesFrom(__DIR__.'/../routes.php');
+        $this->loadViewsFrom(__DIR__.'/Resources/views', 'eventManager');
+        $this->loadMigrationsFrom(__DIR__.'/Migrations');
 
         $this->publishes([
-            __DIR__.'/EventManager/Resources/views' => \resource_path('views/vendor/eventManager'),
+            __DIR__.'/Resources/views' => \resource_path('views/vendor/eventManager'),
         ], 'views');
 
         $this->publishes([
-            __DIR__.'/EventManager/Migrations' => \database_path('migrations'),
+            __DIR__.'/Migrations' => \database_path('migrations'),
         ], 'migrations');
 
         $this->publishes([
-            __DIR__.'/EventManager/Resources/assets' => public_path('vendor/eventManager'),
+            __DIR__.'/Resources/assets' => public_path('vendor/eventManager'),
         ], 'public');
     }
 

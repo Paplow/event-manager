@@ -16,8 +16,8 @@
         "nesbot/carbon": "~1.20"
     },
     "autoload": {
-        "psr-0": {
-            "Paplow\\EventManager": "src/EventManager"
+        "psr-4": {
+            "Paplow\\EventManager\\": "src/EventManager/"
         },
         "files": [
             "src/functions.php"
